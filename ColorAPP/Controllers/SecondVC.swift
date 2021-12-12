@@ -30,20 +30,12 @@ class SecondVC: UIViewController {
     
     @IBOutlet weak var editButton: UIButton!
 
-//    private var colorView: UIColor!
- 
     var delegate: ColorDelegate?
     var colorFromMainVC: UIColor!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        colorView.backgroundColor = colorFromMainVC
-        setValueForSlider()
-        setValueForLabel()
-        setValueForTextField()
-
-        // Do any additional setup after loading the view.
+        configure()
     }
     
 
@@ -133,6 +125,26 @@ class SecondVC: UIViewController {
         }
     
 }
+
+extension SecondVC {
+    func configure() {
+        colorView.backgroundColor = colorFromMainVC
+        setValueForSlider()
+        setValueForLabel()
+        setValueForTextField()
+    }
+}
+
+extension SecondVC {
+}
+
+extension SecondVC {
+}
+
+extension SecondVC {
+}
+
+
 extension SecondVC {
     private func showAlert(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
